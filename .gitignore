@@ -1,0 +1,7 @@
+
+# Ignore dynaconf secret files
+.secrets.*
+/backend/.venv
+
+# dependencies
+/frontend/node_modules
