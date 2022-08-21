@@ -11,7 +11,7 @@ class Route(Base):
         return f'{self.id} {self.name}'
         
     id = Column(Integer, primary_key=True)
-    name = Column(String)
+    name = Column(String, nullable=False)
     tour_id = Column(Integer, ForeignKey("tour.id"))
     tour = relationship("Tour", back_populates="route", uselist=False)
     places = relationship("Place",  back_populates ='route')
