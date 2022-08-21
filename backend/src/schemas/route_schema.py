@@ -3,13 +3,12 @@ from typing import Optional, List
 
 from pydantic import BaseModel
 
-from schema_place import PlaceBase
+from schemas.place_schema import PlaceBase
 
 
 class RouteBase(BaseModel):
     name:str 
-    tour_id:int 
-    places: List[PlaceBase]
+    tour_id: Optional[int] 
 
     class Config:
         orm_mode = True
