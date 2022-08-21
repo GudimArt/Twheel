@@ -3,7 +3,7 @@ from typing import Optional
 from pydantic import BaseModel
 
 
-class Place(BaseModel):
+class PlaceBase(BaseModel):
     name:str
     route_id:Optional[int]
     image:str 
