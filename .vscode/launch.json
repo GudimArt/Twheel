@@ -5,12 +5,19 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: текущий файл",
+            "cwd": "${workspaceFolder}\\frontend",
+            "command": "npm start",
+            "name": "Run npm dev",
+            "request": "launch",
+            "type": "node-terminal"
+            
+        },
+        {
+            "name": "Python: Current File",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/backend/src/__main__.py",
+            "program": "${workspaceFolder}\\backend\\src\\__main__.py",
             "console": "integratedTerminal",
-            "justMyCode": true
-        }
+        },
     ]
 }

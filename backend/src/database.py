@@ -1,8 +1,6 @@
-from ast import excepthandler
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.engine.url import URL
 
 from config import settings as _settings
 
