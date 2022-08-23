@@ -14,15 +14,20 @@ class RoutController():
     @router_route_controller.get("/routes")
     async def get_all(self):
         return await RouteService.get_all(self)
+
     @router_route_controller.get("/route/{id}")
-    async def get_by_id(self, id:int):
-        return await RouteService.get_by_id(self, id)   
+    async def get_by_id(self, id_:int):
+        return await RouteService.get_by_id(self, id_)
+
     @router_route_controller.post("/route")
     async def add(self, route:RouteBase):
         await RouteService.add(self, route)
+
     @router_route_controller.delete("/route/{id}")
-    async def delete(self, id:int):
-        await RouteService.delete(self, id)
+    async def delete(self, id_:int):
+        await RouteService.delete(self, id_)
+
     @router_route_controller.put("/route")
-    async def update(self, id:int, route:RouteBase):
-        await RouteService.update(self, route)
+    async def update(self, id_:int, route:RouteBase):
+        await RouteService.update(self ,id_, route)
+        

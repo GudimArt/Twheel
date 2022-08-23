@@ -1,15 +1,15 @@
 from sqlalchemy import Column, ForeignKey, Integer, String
-from sqlalchemy.orm import relationship, backref
+from sqlalchemy.orm import relationship
 
 from database import Base
 
 
-class Route(Base): 
+class Route(Base):
     __tablename__ ='route'
 
     def __repr__(self):
         return f'{self.id} {self.name}'
-        
+
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
     tour_id = Column(Integer, ForeignKey("tour.id"))

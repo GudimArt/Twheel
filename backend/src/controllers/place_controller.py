@@ -16,17 +16,18 @@ class PlaceController():
         return await PlaceService.get_all(self)
 
     @router_place_controller.get("/place/{id}")
-    async def get_by_id(self, id:int):
-        return await PlaceService.get_by_id(self, id)   
+    async def get_by_id(self, id_:int):
+        return await PlaceService.get_by_id(self, id_)
 
     @router_place_controller.post("/place")
     async def add(self, place:PlaceBase):
         await PlaceService.add(self, place)
 
     @router_place_controller.delete("/place/{id}")
-    async def delete(self, id:int):
-        await PlaceService.delete(self, id)
-    
+    async def delete(self, id_:int):
+        await PlaceService.delete(self, id_)
+
     @router_place_controller.put("/place")
-    async def update(self, id:int, place:PlaceBase):
-        await PlaceService.update(self,id, place)
+    async def update(self, id_:int, place:PlaceBase):
+        await PlaceService.update(self, id_, place)
+        

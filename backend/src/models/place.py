@@ -1,5 +1,5 @@
 from sqlalchemy import Column, ForeignKey, Integer, String, Boolean
-from sqlalchemy.orm import relationship, backref
+from sqlalchemy.orm import relationship
 
 from database import Base
 
@@ -9,7 +9,7 @@ class Place(Base):
 
     def __repr__(self):
         return f'{self.id} {self.name}'
-        
+
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
     route_id = Column(Integer, ForeignKey("route.id"))
