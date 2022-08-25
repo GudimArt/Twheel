@@ -6,9 +6,9 @@ from pydantic import BaseModel
 class PlaceBase(BaseModel):
     name:str
     route_id:Optional[int]
-    image:str 
+    image:str
     availability_cafe:Optional[bool]
-    availability_camp:Optional[bool] 
+    availability_camp:Optional[bool]
 
     class Config:
         orm_mode = True
