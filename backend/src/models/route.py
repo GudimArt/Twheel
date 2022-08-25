@@ -15,4 +15,3 @@ class Route(Base):
     tour_id = Column(Integer, ForeignKey("tour.id"))
     tour = relationship("Tour", back_populates="route", uselist=False)
     places = relationship("Place",  back_populates ='route')
-    

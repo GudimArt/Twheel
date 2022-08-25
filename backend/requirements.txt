@@ -4,3 +4,7 @@ fastapi
 pydantic
 psycopg2-binary
 dynaconf
+fastapi_utils
+fastapi-users[sqlalchemy]
+SQLAlchemy-Utils
+phonenumbers
